@@ -1,0 +1,15 @@
+{
+  "name": "ateeqcli",
+  "version": "1.0.1",
+  "description": "",
+  "main": "./lib/great.js",
+  "bin": {"ateeq":"./bin/index.js"},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "muhammad atique",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^16.4.1"
+  }
+}
