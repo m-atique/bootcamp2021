@@ -1,0 +1,19 @@
+{
+  "todos": [
+    {
+      "id": 0,
+      "task": "morning walk",
+      "complete": false
+    },
+    {
+      "id": 1,
+      "task": "brake fast",
+      "complete": false
+    },
+    {
+      "id": 2,
+      "task": "office",
+      "complete": false
+    }
+  ]
+}

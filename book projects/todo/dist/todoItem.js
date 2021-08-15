@@ -7,6 +7,7 @@ class TodoItem {
         this.task = task;
         this.complete = complete;
     }
+    //---------------------------------------------------printing todo in console
     printTodo() {
         console.log(`${this.id}\t${this.task} ${this.complete
             ? "\t(complete)" : ""}`);
