@@ -17,9 +17,14 @@ export class LamdaStack extends cdk.Stack {
 
 //-----------------------------------------------------------Need a hit point url which is API gateway 
 
-new apigateway.LambdaRestApi(this, 'myapi', {
+const api =new apigateway.LambdaRestApi(this, 'myapi', {
   handler: hellolambda,                                     //-----  it is our function defined above as lambda function
+  proxy: false                                              //------ to limitize use of url
 });
+
+ // SPECIFIC the use of url to only get request with this page address
+const about = api.root.addResource('About')
+about.addMethod('GET')             
 
 
   }
