@@ -8,7 +8,7 @@ export class GraphqlStack extends cdk.Stack {
 
     // The code that defines your stack goes here
 
-    //----------------------------------------------
+    //---1st constuct------------------------------------------- defining grpgh  ql api
     const api = new appsync.GraphqlApi(this, 'GraphqlApi', {
       name: 'cdk-api',
       schema: appsync.Schema.fromAsset('Gql/schema.gql'), //----------path specified for lambda 
@@ -23,10 +23,14 @@ export class GraphqlStack extends cdk.Stack {
       xrayEnabled: true  //--------------- enablaing xray debbug(an aws code debbugear)
     })
 
-//---------------------printing Grpaph ql url after deploying
+//-2nd construct--------------------printing Grpaph ql api url after deploying
     new cdk.CfnOutput(this, 'GrpahqlApiUrl', {
       value: api.graphqlUrl
     })
+//-3rd construct--------------------printing  api key after deploying
+new cdk.CfnOutput(this, 'GrpahqlApiKey', {
+  value: api.apiKey || ''
+})
 
   }
 }
