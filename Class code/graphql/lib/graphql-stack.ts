@@ -33,13 +33,16 @@ new cdk.CfnOutput(this, 'GrpahqlApiKey', {
   value: api.apiKey || ''
 })
 
-//------------------------defining lamba 
+//-3rd construct-----------------------defining lamba 
 const lambdaFunc = new lambda.Function(this,'lambdafunc',{
   runtime:lambda.Runtime.NODEJS_12_X,
   code: lambda.Code.fromAsset('lambda'),
   handler:'index.handler',
   timeout:cdk.Duration.seconds(10)
 })
+
+//-4th conssctrut---------------------------------------setting lambda as data resource-
+const lambda_datasource = api.addLambdaDataSource('lambdaDataSource',lambdaFunc)
 
   }
 }
