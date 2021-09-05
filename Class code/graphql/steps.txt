@@ -13,3 +13,8 @@
 
 6.  created Gql folder
 7.  created schema.gql in Gql folder
+8.  define api in graph ql-stack.typescript
+9.  write code to print apiurl and api key
+10. created lamba funtion
+11. created index.ts . lambda folder and code 
+12. call this lambda in graphql-stack.ts

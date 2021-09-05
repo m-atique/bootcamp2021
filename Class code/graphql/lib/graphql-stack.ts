@@ -1,5 +1,6 @@
 import * as cdk from '@aws-cdk/core';
 import * as appsync from '@aws-cdk/aws-appsync'
+import * as lambda from '@aws-cdk/aws-lambda'
 
 
 export class GraphqlStack extends cdk.Stack {
@@ -30,6 +31,14 @@ export class GraphqlStack extends cdk.Stack {
 //-3rd construct--------------------printing  api key after deploying
 new cdk.CfnOutput(this, 'GrpahqlApiKey', {
   value: api.apiKey || ''
+})
+
+//------------------------defining lamba 
+const lambdaFunc = new lambda.Function(this,'lambdafunc',{
+  runtime:lambda.Runtime.NODEJS_12_X,
+  code: lambda.Code.fromAsset('lambda'),
+  handler:'index.handler',
+  timeout:cdk.Duration.seconds(10)
 })
 
   }
