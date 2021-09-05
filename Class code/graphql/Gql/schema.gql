@@ -1,0 +1,5 @@
+//Specifing root point  from where severcan access other apps
+type Query {
+ notes :[String]     
+//--------------------------------this notes will return array of strings
+}

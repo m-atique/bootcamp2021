@@ -1,0 +1,15 @@
+**Steps to follow**
+===================
+
+1. cdk --version
+    if version is not latest thhen run command below
+
+
+2. npm install aws-cdk -g
+3. cdk init app --language typescript (to create intial setup)
+4. npm install @aws-cdk/aws-appsync
+
+5. npm install @aws-cdk/aws-lambda
+
+6.  created Gql folder
+7.  created schema.gql in Gql folder

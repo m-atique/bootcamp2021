@@ -24,7 +24,10 @@ const api =new apigateway.LambdaRestApi(this, 'myapi', {
 
  // SPECIFIC the use of url to only get request with this page address
 const about = api.root.addResource('About')
-about.addMethod('GET')             
+about.addMethod('GET') 
+
+const Home = api.root.addResource('home')
+Home.addMethod('GET') 
 
 
   }
