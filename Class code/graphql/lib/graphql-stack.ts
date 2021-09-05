@@ -44,5 +44,8 @@ const lambdaFunc = new lambda.Function(this,'lambdafunc',{
 //-4th conssctrut---------------------------------------setting lambda as data resource-
 const lambda_datasource = api.addLambdaDataSource('lambdaDataSource',lambdaFunc)
 
+//----------------------------------------------------------defining resolver
+lambda_datasource.createResolver({typeName:'Query',fieldName:'notes'})
+
   }
 }
