@@ -18,3 +18,5 @@
 10. created lamba funtion
 11. created index.ts . lambda folder and code 
 12. call this lambda in graphql-stack.ts
+13. use lambda as data source
+14. create resolver for datasource
