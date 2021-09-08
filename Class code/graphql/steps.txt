@@ -20,3 +20,16 @@
 12. call this lambda in graphql-stack.ts
 13. use lambda as data source
 14. create resolver for datasource
+15. cdk deploy
+
+//---------------------------------------2nd step...............................\\
+
+1. open postman
+2. create new workplace
+3. crete new api
+4. define api 
+
+5. generate collection
+6. provide api key in collection and collection header
+7. test with  api url 
+
