@@ -7,4 +7,4 @@ export async function handler(event: APIGatewayProxyEvent, context: Context): Pr
     statusCode: 200,
     headers: { "Content-Type": "text/plain" },
     body: `Hello, CDK! You've hit ${event.path}\n`
-  };
+  }}
