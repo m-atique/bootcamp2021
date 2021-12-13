@@ -1,0 +1,5 @@
+# this is special type Query
+type Query {
+    notes:[String]  
+    # this will return array of strings
+}
