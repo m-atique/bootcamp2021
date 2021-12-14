@@ -1,0 +1,23 @@
+type Query {
+    getTodos:[]
+}
+
+#--------------------type for change data
+type Mutation {
+addTodo(todo:TodoInut!):Todo
+updateTodo(todo:TodoInut!):Todo
+deleteTodo(todoId:string):String
+}
+
+#-----------------Difining todo structure
+type todo {
+    id:ID!
+    titlle:String!
+    done:Boolean!
+}
+
+input TodoInput {
+    id:ID!
+    titlle:String!
+    done:Boolean!
+}
